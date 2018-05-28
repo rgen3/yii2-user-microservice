@@ -1,0 +1,10 @@
+{
+  "title": "Test schema",
+  "type": "object",
+  "properties": {
+    "value": {
+      "type": "string"
+    }
+  },
+  "required": ["value"]
+}

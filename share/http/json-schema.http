@@ -1,0 +1,5 @@
+POST http://{{host}}/info/json-schema
+
+{ "value" : 234 }
+
+###
