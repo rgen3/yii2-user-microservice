@@ -1,0 +1,13 @@
+POST http://{{host}}/login
+
+{
+    "data" : {
+        "username" : "rgen32",
+        "email" : "rgen32@mail.ru",
+        "password" : "fgb45tr88",
+        "ip" : "127.0.0.1",
+        "userAgent": "Mozilla"
+    }
+}
+
+###

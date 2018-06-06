@@ -1,0 +1,9 @@
+POST http://{{host}}/revoke-token
+
+{
+    "data" : {
+        "tokenId": "17fd6d22-c083-4c05-b2ab-09f0ba524487"
+    }
+}
+
+###

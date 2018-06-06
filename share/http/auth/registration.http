@@ -1,0 +1,11 @@
+POST http://{{host}}/registration
+
+{
+    "data" : {
+        "username" : "rgen321",
+        "email" : "rgen321@mail.ru",
+        "password" : "fgb45tr88"
+    }
+}
+
+###

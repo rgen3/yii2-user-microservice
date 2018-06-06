@@ -21,12 +21,12 @@ if (!function_exists('app')) {
     }
 }
 
-if (!function_exists('log')) {
+if (!function_exists('logger')) {
     /**
      * @param string $message
      * @param string $level
      */
-    function log(string $message, string $level = 'info'): void
+    function logger(string $message, string $level = 'info'): void
     {
         switch ($level) {
             case 'error':
@@ -52,5 +52,57 @@ if (!function_exists('redis')) {
     function redis(): yii\redis\Connection
     {
        return Yii::$app->redis;
+    }
+}
+
+if (!function_exists('jwt')) {
+    /**
+     * @return \app\models\JwtToken
+     */
+    function jwt(): \app\models\JwtToken
+    {
+        return new \app\models\JwtToken();
+    }
+}
+
+if (!function_exists('sp')) {
+    /**
+     * @return \Rgen3\QueryBuilder
+     */
+    function sp(): \Rgen3\QueryBuilder
+    {
+        return new \Rgen3\QueryBuilder();
+    }
+}
+
+if (!function_exists('execSp')) {
+    /**
+     * @param \Rgen3\QueryBuilder $builder
+     * @return array
+     * @throws \yii\db\Exception
+     */
+    function execSp(\Rgen3\QueryBuilder $builder)
+    {
+        return db()->createCommand(new \yii\db\Expression($builder->getSql()))->queryAll();
+    }
+}
+
+if (!function_exists('execOneSp')) {
+    /**
+     * @param \Rgen3\QueryBuilder $builder
+     * @return array|false
+     * @throws \yii\db\Exception
+     */
+    function execOneSp(\Rgen3\QueryBuilder $builder)
+    {
+        return db()->createCommand(new \yii\db\Expression($builder->getSql()))->queryOne();
+    }
+}
+
+if (!function_exists('dd')) {
+    function dd($value)
+    {
+        var_dump($value);
+        die();
     }
 }

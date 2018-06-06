@@ -13,6 +13,8 @@ $config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+        '@publicKey' => '@app/share/private/key.pub',
+        '@privateKey' => '@app/share/private/key'
     ],
     'components' => [
         'cache' => [

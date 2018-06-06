@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0cd2499ae5c997341aff0332c0daf857",
+    "content-hash": "42ba02e49621c03611b01493137b2464",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -249,6 +249,43 @@
                 "jwt"
             ],
             "time": "2017-09-01T08:23:26+00:00"
+        },
+        {
+            "name": "rgen3/php-postgres-procedure-builder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rgen3/postgres-stored-builder.git",
+                "reference": "5e68f5c9b156c3c552fc55e7b937c3093be8fde5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rgen3/postgres-stored-builder/zipball/5e68f5c9b156c3c552fc55e7b937c3093be8fde5",
+                "reference": "5e68f5c9b156c3c552fc55e7b937c3093be8fde5",
+                "shasum": ""
+            },
+            "require-dev": {
+                "larapack/dd": "1.*",
+                "phpunit/phpunit": "^7.2@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rgen3\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Tanaev",
+                    "email": "rgen3@mail.ru"
+                }
+            ],
+            "description": "Sql builder for stored procedures for postgresql",
+            "time": "2018-04-29T12:43:23+00:00"
         },
         {
             "name": "rgen3/yii2-json-api-controller",
@@ -1083,7 +1120,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "rgen3/php-postgres-procedure-builder": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

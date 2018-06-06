@@ -19,7 +19,9 @@
         "rgen3/yii2-json-api-controller": "0.0.2",
         "sergeymakinen/yii2-jwt-user": "v3.0.0",
         "yidas/yii2-composer-bower-skip": "2.0.13",
-        "yiisoft/yii2-redis": "2.0.8"
+        "yiisoft/yii2-redis": "2.0.8",
+        "lcobucci/jwt": "^3.2",
+        "rgen3/php-postgres-procedure-builder": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

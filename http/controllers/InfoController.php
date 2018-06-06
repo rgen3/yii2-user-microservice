@@ -5,6 +5,7 @@ namespace app\http\controllers;
 
 use app\http\requests\info\JsonSchemaRequest;
 use app\models\InfoModel;
+use app\repositories\driver\User;
 use rgen3\controller\json\BaseController;
 use app\http\requests\info\InfoRequest;
 use yii\web\Response;
@@ -63,5 +64,18 @@ class InfoController extends BaseController
     public function actionException()
     {
         throw new \Exception('Unhandled exception');
+    }
+
+    /**
+     * @throws \Rgen3\Exception\InvalidFieldType
+     */
+    public function actionTest()
+    {
+        $driver = new User();
+        var_dump($driver->getById(3));
+        die();
+        $token = jwt()->getBuilder()->setIssuer('sldjfsl')->getToken();
+        var_dump(jwt()->loadToken('eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJpc3MiOiJzbGRqZnNsIn0.'));
+        die();
     }
 }
